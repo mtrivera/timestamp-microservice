@@ -12,8 +12,7 @@
   },
   "dependencies": {
     "express": "^4.16.2",
-    "strftime": "^0.10.0",
-    "validate.io-strict-date": "^1.0.3"
+    "moment": "^2.21.0"
   },
   "engines": {
     "node": "8.x"

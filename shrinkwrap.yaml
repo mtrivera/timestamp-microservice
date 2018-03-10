@@ -1,7 +1,6 @@
 dependencies:
   express: 4.16.2
-  strftime: 0.10.0
-  validate.io-strict-date: 1.0.3
+  moment: 2.21.0
 packages:
   /accepts/1.3.5:
     dependencies:
@@ -227,6 +226,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-KI1+qOZu5DcW6wayYHSzR/tXKCDC5Om4s1z2QJjDULzLcmf3DvzS7oluY4HCTrc+9FiKmWUgeNLg7W3uIQvxtQ==
+  /moment/2.21.0:
+    dev: false
+    resolution:
+      integrity: sha512-TCZ36BjURTeFTM/CwRcViQlfkMvL1/vFISuNLO5GkcVm1+QHfbSiNqZuWeMFjj1/3+uAjXswgRk30j1kkLYJBQ==
   /ms/2.0.0:
     dev: false
     resolution:
@@ -342,12 +345,6 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-zhSCtt8v2NDrRlPQpCNtw/heZLtfUDqxBM1udqikb/Hbk52LK4nQSwr10u77iopCW5LsyHpuXS0GnEc48mLeew==
-  /strftime/0.10.0:
-    dev: false
-    engines:
-      node: '>=0.2.0'
-    resolution:
-      integrity: sha1-s/D6QZKVICpaKJ9ta+n0kJphcZM=
   /type-is/1.6.16:
     dependencies:
       media-typer: 0.3.0
@@ -369,10 +366,6 @@ packages:
       node: '>= 0.4.0'
     resolution:
       integrity: sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
-  /validate.io-strict-date/1.0.3:
-    dev: false
-    resolution:
-      integrity: sha1-0l3Km3wAHUNNZBgoxR6z+/EiPWo=
   /vary/1.1.2:
     dev: false
     engines:
@@ -384,5 +377,4 @@ shrinkwrapMinorVersion: 4
 shrinkwrapVersion: 3
 specifiers:
   express: ^4.16.2
-  strftime: ^0.10.0
-  validate.io-strict-date: ^1.0.3
+  moment: ^2.21.0

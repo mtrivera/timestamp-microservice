@@ -18,18 +18,22 @@ app.get("/", function (request, response) {
 });
 
 app.param('userInput', (req, res, next, userInput) => {
-  // 1. Check if valid date
   var uInput = userInput;
-  var tsCheck = moment(uInput, ['MMMM D, YYYY', 'x']);
-  //var unixCheck = moment(uInput, 'x');
-  //var naturalCheck = moment(uInput, 'MMMM D, YYYY');
+  // 1. Check if valid date
+  var tsCheck = moment(uInput, ['MMMM D, YYYY', 'X']);
+
   // 2. If valid date, return object with unix and natural with values
   if (tsCheck.isValid()) {
-    // TODO: Natural date output is incorrect, look into it
-    req.userInput = { "unix": Number(tsCheck.format('x')), "natural": tsCheck.format('MMMM D, YYYY')};
+    req.userInput = { 
+      "unix": Number(tsCheck.format('X')), 
+      "natural": tsCheck.format('MMMM D, YYYY')
+    };
   } else {
-  // 3. If invalid date, return obejct with null for both values
-    req.userInput = { "unix": null, "natural": null };
+  // 3. If invalid date, return object with null for both values
+    req.userInput = { 
+      "unix": null, 
+      "natural": null 
+    };
   }
   next();
 });
